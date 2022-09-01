@@ -1,10 +1,15 @@
 import { useState, useEffect } from 'react';
+import Header from '../Header/Header';
 
 function App () {
-  
+  const [headerColor, setHeaderColor] = useState('red');
   return (
     <div>
-      <h1>Phrygian Props Review</h1>
+      <Header color={headerColor} />
+      <input
+        value={headerColor} 
+        onChange={(event) => setHeaderColor(event.target.value)} 
+      />
     </div>
   );
 
